@@ -55,7 +55,7 @@ jobs:
         env:
           cache-name: hugomod
         with:
-          path: /home/runner/.cache/hugo_cache
+          path: /tmp/hugo_cache_runner
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./go.sum') }}
           restore-keys:
             ${{ runner.os }}-build-${{ env.cache-name }}
